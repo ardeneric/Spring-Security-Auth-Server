@@ -1,4 +1,4 @@
-package com.notewitch.auth.entity;
+package com.auth.entity;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;

@@ -1,4 +1,4 @@
-package com.notewitch.auth.entity;
+package com.auth.entity;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

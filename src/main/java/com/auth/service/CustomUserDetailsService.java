@@ -1,4 +1,4 @@
-package com.notewitch.auth.service;
+package com.auth.service;
 
 import java.util.Optional;
 
@@ -8,9 +8,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.notewitch.auth.entity.CustomUserDetails;
-import com.notewitch.auth.entity.User;
-import com.notewitch.auth.repository.UserRepository;
+import com.auth.entity.CustomUserDetails;
+import com.auth.entity.User;
+import com.auth.repository.UserRepository;
 
 import lombok.extern.slf4j.Slf4j;
 

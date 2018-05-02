@@ -1,4 +1,4 @@
-package com.notewitch.auth.config;
+package com.auth.config;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

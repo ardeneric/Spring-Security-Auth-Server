@@ -1,4 +1,4 @@
-package com.notewitch.auth.endpoint;
+package com.auth.endpoint;
 
 import java.security.Principal;
 import java.util.List;
@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.notewitch.auth.entity.User;
-import com.notewitch.auth.repository.UserRepository;
+import com.auth.entity.User;
+import com.auth.repository.UserRepository;
 
 
 @RestController
