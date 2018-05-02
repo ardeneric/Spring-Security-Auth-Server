@@ -1,0 +1,18 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragments/header::links">
+</head>
+<title>Login</title>
+<body class = "login">
+        <div class="card card-container">
+        	<h2 style="text-align: center;">Login</h2>
+        	<p th:if="${loginError}" class="error">Wrong user or password</p>
+            <form th:action="@{/login}" class="form-signin" method = "post">
+                <input type="Username" id="inputUsername" name="username" class="form-control" placeholder="Username" required ="required" autofocus="autofocus"/>
+                <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required = "required" />
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+            </form>
+        </div>
+</body>
+</html>
+
