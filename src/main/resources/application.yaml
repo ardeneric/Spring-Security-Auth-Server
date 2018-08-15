@@ -12,10 +12,14 @@ spring:
   application:
     name: auth-server
   datasource:
-    url: jdbc:mysql://localhost:3306/notewitch?useSSL=false&useUnicode=yes&characterEncoding=UTF-8
-    username: root  
-    password: root
-    driver-class-name: com.mysql.jdbc.Driver
+   #datasource:
+    #url: jdbc:mysql://localhost:3306/notewitch?useSSL=false&useUnicode=yes&characterEncoding=UTF-8
+    #username: root  
+    #password: root
+    #driver-class-name: com.mysql.jdbc.Driver
+    url: ${JDBC_DATABASE_URL}
+    username: ${JDBC_DATABASE_USERNAME}  
+    password: ${JDBC_DATABASE_PASSWORD}
   jpa:
     show-sql: true 
     hibernate:
