@@ -17,9 +17,9 @@ spring:
     #username: root  
     #password: root
     #driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:postgres:// + ${HEROKU_POSTGRESQL_BRONZE_URL} + /d74oqr268mfr3h?useSSL=true
-    username: ${HEROKU_POSTGRESQL_BRONZE_USERNAME}  
-    password: ${HEROKU_POSTGRESQL_BRONZE_PASSWORD}
+    url: jdbc:postgres:// + ${HEROKU_POSTGRESQL_MAROON_URL} + /d74oqr268mfr3h?useSSL=true
+    username: ${HEROKU_POSTGRESQL_MAROON_USERNAME}  
+    password: ${HEROKU_POSTGRESQL_MAROON_PASSWORD}
   jpa:
     show-sql: true 
     hibernate:
