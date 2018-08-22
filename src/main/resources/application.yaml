@@ -17,7 +17,7 @@ spring:
     #username: root  
     #password: root
     #driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:postgresql:// + ${HEROKU_POSTGRESQL_MAROON_URL} + /d74oqr268mfr3h?useSSL=true
+    url: ${HEROKU_POSTGRESQL_MAROON_URL}
     username: ${HEROKU_POSTGRESQL_MAROON_USERNAME}  
     password: ${HEROKU_POSTGRESQL_MAROON_PASSWORD}
     driver-class-name:  org.postgresql.Driver
