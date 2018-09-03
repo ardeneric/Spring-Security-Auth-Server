@@ -8,7 +8,7 @@ spring:
   application:
     name: auth-server
   datasource:
-    url: jdbc   + ${HEROKU_POSTGRESQL_CRIMSON_URL}
+    url: jdbc + ${HEROKU_POSTGRESQL_CRIMSON_URL}
     username: ${JDBC_DATABASE_USERNAME}
     password: ${JDBC_DATABASE_PASSWORD}
     #driver-class-name: org.postgresql.Driver
@@ -17,3 +17,6 @@ spring:
     hibernate:
       ddl-auto: none
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+  profiles:
+    active:
+    - dev
