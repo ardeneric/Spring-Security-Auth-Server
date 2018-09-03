@@ -38,28 +38,28 @@
 					<span class="login100-form-title p-b-59"> Sign Up </span> 
 					<span
 						class="label-input100">First Name</span> 
-						<input class="input100"
+						<input th:field="*{firstName}" class="input100"
 						type="text" name="fistName"  /> 
 						<span
 						class="label-input100">Last Name</span>
-						 <input
+						 <input th:field="*{lastName}"
 						class="input100" type="text" name="lastName"
 						/> 
 						<span class="label-input100">Email</span> 
-						<input class="input100" type="text" name="email"
+						<input th:field="*{email}" class="input100" type="text" name="email"
 						/> 
 						<span class="label-input100">Other
 						Names</span> 
-						<input class="input100" type="text" name="otherNames"
+						<input th:field="*{otherNames}" class="input100" type="text" name="otherNames"
 						/> 
 						<span class="label-input100">Address</span> 
-						<input class="input100" type="text" name="address"
+						<input th:field="*{address}" class="input100" type="text" name="address"
 						/> 
 						<span class="label-input100">Username</span>
-					<input class="input100" type="text" name="username"
+					<input th:field="*{username}" class="input100" type="text" name="username"
 						 />
 						<span class="label-input100">Password</span>
-					<input class="input100" type="password" name="password"
+					<input th:field="*{password}" class="input100" type="password" name="password"
 						/> 
 
 					<div class="container-login100-form-btn">
