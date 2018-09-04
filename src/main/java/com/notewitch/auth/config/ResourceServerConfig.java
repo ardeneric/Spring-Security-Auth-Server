@@ -9,6 +9,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.web.cors.CorsConfiguration;
 
@@ -22,6 +23,9 @@ public class ResourceServerConfig extends WebSecurityConfigurerAdapter{
 	
 	@Autowired
     private UserDetailsService userDetailsService;
+	
+	@Autowired
+	PasswordEncoder passwordEncoder;
 	
 	@Override
 	public void configure(WebSecurity web) throws Exception{
@@ -51,7 +55,8 @@ public class ResourceServerConfig extends WebSecurityConfigurerAdapter{
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception{
 		auth
 			.parentAuthenticationManager(authenticationManager)
-			.userDetailsService(userDetailsService);
+			.userDetailsService(userDetailsService)
+			.passwordEncoder(passwordEncoder);
 	}
 
 }

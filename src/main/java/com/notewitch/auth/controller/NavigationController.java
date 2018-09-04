@@ -1,6 +1,7 @@
 package com.notewitch.auth.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +19,9 @@ import lombok.extern.slf4j.Slf4j;
 public class NavigationController {
 	@Autowired
 	UserRepository userRepository;
+	
+	@Autowired
+	PasswordEncoder passwordEncoder;
 
 	@RequestMapping("/login")
 	public String login() {
@@ -40,6 +44,7 @@ public class NavigationController {
 			Role r = new Role();
 			r.setId(1);
 			user.setRoleId(r);
+			user.setPassword(passwordEncoder.encode(user.getPassword()));
 			userRepository.save(user);
 			log.info(user.getUsername() + ":: saved!!!" );
 			return "redirect:/login";
