@@ -475,6 +475,13 @@ iframe {
   transition: opacity 0.4s;
 }
 
+.error{
+	border: 1px solid red;
+	background-color: red;
+	padding: 5px;
+	width: 100%
+}
+
 .alert-validate::after {
   content: "\f06a";
   font-family: FontAwesome;

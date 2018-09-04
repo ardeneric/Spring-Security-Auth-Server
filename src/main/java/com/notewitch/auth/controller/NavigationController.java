@@ -21,7 +21,6 @@ public class NavigationController {
 
 	@RequestMapping("/login")
 	public String login() {
-		
 		return "login";
 	}
 
@@ -35,13 +34,15 @@ public class NavigationController {
 	public String addUser(User user, Model model) {
 		if (userRepository.findByUsername(user.getUsername()).isPresent()) {
 			model.addAttribute("userPresent", true);
+			return "signup";
 		}else {
 			log.info("Saving new user ::" + user.getUsername() );
 			Role r = new Role();
 			r.setId(1);
 			user.setRoleId(r);
 			userRepository.save(user);
+			log.info(user.getUsername() + ":: saved!!!" );
+			return "redirect:/login";
 		}
-		return "redirect:/login";
 	}
 }
