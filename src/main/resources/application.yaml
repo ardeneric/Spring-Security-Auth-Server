@@ -19,4 +19,4 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   profiles:
     active:
-    - default
+    - dev
