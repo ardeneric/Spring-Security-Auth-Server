@@ -7,9 +7,9 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.web.cors.CorsConfiguration;
 
 @Configuration
-@Order(101)
-public class UserWebSecurityConfig extends WebSecurityConfigurerAdapter {
-	@Override
+//@Order(1)
+public class UserWebSecurityConfig{
+	/*@Override
 	protected void configure(HttpSecurity http) throws Exception{
 		http.cors().configurationSource(request -> new CorsConfiguration().applyPermitDefaultValues())
 				.and()
@@ -19,5 +19,5 @@ public class UserWebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.permitAll()
 				.and()
 				.formLogin().loginPage("/login").permitAll();
-	}
+	}*/
 }

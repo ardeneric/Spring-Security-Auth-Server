@@ -45,7 +45,7 @@ public class ResourceServerConfig extends WebSecurityConfigurerAdapter{
 				.anyRequest()
 				.authenticated()*/
 				.requestMatchers()
-				.antMatchers("/login","/oauth/authorize", "/oauth/confirm_access", "/exit")
+				.antMatchers("/login","/oauth/authorize", "/oauth/confirm_access", "/exit","/addUser", "/signup")
 				.and()
 				.authorizeRequests()
 				.anyRequest()
